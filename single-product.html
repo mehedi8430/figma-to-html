@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - E-Shop</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="index.html" class="logo">E-Shop</a>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Product Section -->
+    <section class="product-section">
+      <div class="container">
+        <div class="product-content">
+          <!-- Product Images -->
+          <div class="product-images">
+            <div class="main-image">
+              <img
+                src="https://via.placeholder.com/600"
+                alt="Product Main Image"
+              />
+            </div>
+            <div class="thumbnail-images">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="Thumbnail 1"
+                class="active"
+              />
+              <img src="https://via.placeholder.com/150" alt="Thumbnail 2" />
+              <img src="https://via.placeholder.com/150" alt="Thumbnail 3" />
+              <img src="https://via.placeholder.com/150" alt="Thumbnail 4" />
+            </div>
+          </div>
+
+          <!-- Product Details -->
+          <div class="product-details">
+            <h1>Product Name</h1>
+            <div class="product-meta">
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span>(4.0 - 12 reviews)</span>
+              </div>
+              <div class="stock-status in-stock">In Stock</div>
+            </div>
+            <p class="price">$99.99</p>
+            <div class="product-description">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div class="product-options">
+              <div class="option-group">
+                <label>Size:</label>
+                <div class="size-options">
+                  <button class="size-btn">S</button>
+                  <button class="size-btn active">M</button>
+                  <button class="size-btn">L</button>
+                  <button class="size-btn">XL</button>
+                </div>
+              </div>
+              <div class="option-group">
+                <label>Color:</label>
+                <div class="color-options">
+                  <button
+                    class="color-btn"
+                    style="background-color: #ff0000"
+                  ></button>
+                  <button
+                    class="color-btn active"
+                    style="background-color: #0000ff"
+                  ></button>
+                  <button
+                    class="color-btn"
+                    style="background-color: #00ff00"
+                  ></button>
+                </div>
+              </div>
+              <div class="option-group">
+                <label>Quantity:</label>
+                <div class="quantity-selector">
+                  <button class="qty-btn">-</button>
+                  <input type="number" value="1" min="1" max="10" />
+                  <button class="qty-btn">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">Add to Cart</button>
+              <button class="wishlist-btn">
+                <i class="far fa-heart"></i> Add to Wishlist
+              </button>
+            </div>
+            <div class="product-additional">
+              <div class="tabs">
+                <button class="tab-btn active" data-tab="description">
+                  Description
+                </button>
+                <button class="tab-btn" data-tab="specifications">
+                  Specifications
+                </button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+              </div>
+              <div class="tab-content">
+                <div class="tab-pane active" id="description">
+                  <p>Detailed product description goes here...</p>
+                </div>
+                <div class="tab-pane" id="specifications">
+                  <table class="specs-table">
+                    <tr>
+                      <th>Brand</th>
+                      <td>Brand Name</td>
+                    </tr>
+                    <tr>
+                      <th>Material</th>
+                      <td>Premium Quality</td>
+                    </tr>
+                    <tr>
+                      <th>Dimensions</th>
+                      <td>10 x 5 x 2 inches</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="tab-pane" id="reviews">
+                  <div class="review">
+                    <div class="review-header">
+                      <div class="reviewer-name">John Doe</div>
+                      <div class="review-date">March 15, 2024</div>
+                    </div>
+                    <div class="review-rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">
+                      Great product! Exactly what I was looking for.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="related-products">
+          <h2>Related Products</h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Related Product 1"
+              />
+              <h3>Related Product 1</h3>
+              <p class="price">$89.99</p>
+              <a href="single-product.html" class="button">View Details</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Related Product 2"
+              />
+              <h3>Related Product 2</h3>
+              <p class="price">$129.99</p>
+              <a href="single-product.html" class="button">View Details</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Related Product 3"
+              />
+              <h3>Related Product 3</h3>
+              <p class="price">$149.99</p>
+              <a href="single-product.html" class="button">View Details</a>
+            </div>
+            <div class="product-card">
+              <img
+                src="https://via.placeholder.com/300"
+                alt="Related Product 4"
+              />
+              <h3>Related Product 4</h3>
+              <p class="price">$79.99</p>
+              <a href="single-product.html" class="button">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>
+              E-Shop is your one-stop destination for all your shopping needs.
+              We offer quality products at competitive prices.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Info</h3>
+            <p>Email: info@eshop.com</p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Address: 123 Shop Street, City, Country</p>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 E-Shop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
