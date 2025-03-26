@@ -157,7 +157,7 @@ body {
 
 /* Browse The Range Section */
 .browse-range {
-  padding: 60px 0 120px;
+  padding: 60px 0 0;
   background-color: #ffffff;
 }
 
@@ -282,127 +282,228 @@ body {
   }
 }
 
-/* Footer */
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 4rem 0 2rem;
+/* Our Products Section */
+.our-products {
+  padding: 60px 0 0;
+  background-color: #ffffff;
 }
 
-.footer-content {
+.products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 32px;
 }
 
-.footer-section h3 {
-  margin-bottom: 1rem;
+.product-card {
+  position: relative;
+  background-color: #f4f5f7;
+  overflow: hidden;
 }
 
-.footer-section ul {
-  list-style: none;
+.product-image {
+  position: relative;
+  overflow: hidden;
 }
 
-.footer-section ul li {
-  margin-bottom: 0.5rem;
+.product-image img {
+  width: 100%;
+  height: 301px;
+  object-fit: cover;
+  transition: all 0.3s ease;
 }
 
-.footer-section a {
-  color: #fff;
-  text-decoration: none;
+.product-tag {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 4px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 2;
 }
 
-.social-links {
+.product-tag.discount {
+  background-color: #e97171;
+  color: #ffffff;
+}
+
+.product-tag.new {
+  background-color: #2ec1ac;
+  color: #ffffff;
+}
+
+.product-actions {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(20px);
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 16px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 3;
+  width: 80%;
 }
 
-.social-links a {
-  color: #fff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #007bff;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Featured Products */
-.featured-products {
-  padding: 4rem 0;
-}
-
-.featured-products h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-/* Newsletter Section */
-.newsletter {
-  background-color: #007bff;
-  color: #fff;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.newsletter h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.newsletter p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
-.newsletter-form {
-  display: flex;
-  max-width: 500px;
-  margin: 0 auto;
-  gap: 1rem;
-}
-
-.newsletter-form input[type="email"] {
-  flex: 1;
-  padding: 0.8rem 1.5rem;
+.action-btn {
+  background: none;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
 }
 
-.newsletter-form .button {
-  background-color: #fff;
-  color: #007bff;
+.action-btn i {
+  font-size: 14px;
+}
+
+.add-to-cart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-20px);
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+  font-size: 16px;
   font-weight: 600;
+  color: #b88e2f;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 70%;
 }
 
-.newsletter-form .button:hover {
-  background-color: #f8f9fa;
-  color: #0056b3;
+.add-to-cart i {
+  font-size: 18px;
 }
 
-/* Responsive Design for Newsletter */
-@media (max-width: 768px) {
-  .newsletter-form {
-    flex-direction: column;
-    padding: 0 1rem;
-  }
+/* Overlay effect on hover */
+.product-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.72);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
 
-  .newsletter-form input[type="email"] {
-    width: 100%;
-  }
+/* Hover Effects */
+.product-card:hover::after {
+  opacity: 1;
+}
 
-  .newsletter-form .button {
-    width: 100%;
+.product-card:hover .product-actions {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+.product-card:hover .add-to-cart {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+.action-btn:hover {
+  color: #b88e2f;
+}
+
+.add-to-cart:hover {
+  background-color: #b88e2f;
+  color: #ffffff;
+}
+
+/* Product Info */
+.product-info {
+  padding: 16px 24px;
+  text-align: left;
+  background-color: #f4f5f7;
+}
+
+.product-info h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3a3a3a;
+  margin-bottom: 8px;
+}
+
+.product-desc {
+  font-size: 16px;
+  color: #898989;
+  margin-bottom: 8px;
+}
+
+.price-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+.old-price {
+  font-size: 16px;
+  color: #b0b0b0;
+  text-decoration: line-through;
+}
+
+.show-more {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.show-more-btn {
+  padding: 12px 80px;
+  background-color: transparent;
+  border: 1px solid #b88e2f;
+  color: #b88e2f;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #b88e2f;
+  color: #ffffff;
+}
+
+/* Responsive Design for Products */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
   }
 }
