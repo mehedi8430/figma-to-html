@@ -284,7 +284,7 @@ body {
 
 /* Our Products Section */
 .our-products {
-  padding: 60px 0 0;
+  padding: 80px 0 0;
   background-color: #ffffff;
 }
 
@@ -505,5 +505,219 @@ body {
 @media (max-width: 576px) {
   .products-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Rooms Inspiration Section */
+.rooms-inspiration {
+  padding: 60px 0;
+  background-color: #fcf8f3;
+  margin-top: 80px;
+}
+
+.rooms-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.rooms-text {
+  flex: 1;
+  max-width: 400px;
+}
+
+.rooms-text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #3a3a3a;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.rooms-text p {
+  font-size: 16px;
+  color: #616161;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.explore-btn {
+  padding: 12px 28px;
+  background-color: #b88e2f;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #9a7626;
+}
+
+/* Slider Styles */
+.rooms-slider {
+  flex: 2;
+}
+
+.slider-container {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.slide-group {
+  display: flex;
+  gap: 24px;
+}
+
+.slide {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.main-slide {
+  flex: 1.5;
+  height: 480px;
+}
+
+.side-slide {
+  flex: 1;
+  height: 480px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main Slide Info */
+.slide-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+}
+
+.info-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.slide-number {
+  font-size: 16px;
+  color: #616161;
+}
+
+.slide-divider {
+  color: #b88e2f;
+}
+
+.room-type {
+  font-size: 16px;
+  color: #616161;
+}
+
+.room-title {
+  font-size: 28px;
+  color: #3a3a3a;
+  margin-bottom: 16px;
+}
+
+.next-btn {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: #b88e2f;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Side Slide Styles */
+.next-indicator {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #b88e2f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+/* Slider Dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #b88e2f;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .rooms-content {
+    flex-direction: column;
+  }
+
+  .rooms-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .slide-group {
+    flex-direction: column;
+  }
+
+  .main-slide,
+  .side-slide {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-inspiration {
+    padding: 60px 0;
+  }
+
+  .rooms-text h2 {
+    font-size: 32px;
+  }
+
+  .main-slide,
+  .side-slide {
+    height: 320px;
   }
 }
