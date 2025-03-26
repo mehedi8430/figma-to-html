@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Shop - Your One-Stop Shop</title>
+    <title>Furniro - Furniture Store</title>
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/shop.css" />
     <link
@@ -16,27 +16,75 @@
     <header class="header">
       <div class="container">
         <nav class="nav">
-          <a href="index.html" class="logo">E-Shop</a>
+          <a href="index.html" class="logo">
+            <img src="images/home/logo.png" alt="Furniro Logo" />
+          </a>
           <ul class="nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li>
-              <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
-            </li>
           </ul>
+          <div class="nav-actions">
+            <a href="#" class="nav-icon">
+              <img src="images/home/account_icon.png" alt="Account" />
+            </a>
+            <a href="#" class="nav-icon">
+              <img src="images/home/search_icon.png" alt="Search" />
+            </a>
+            <a href="#" class="nav-icon">
+              <img src="images/home/heart_icon.png" alt="Favorites" />
+            </a>
+            <a href="cart.html" class="nav-icon cart-icon">
+              <img src="images/home/cart_icon.png" alt="Cart" />
+            </a>
+          </div>
         </nav>
       </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
+      <div class="hero-background">
+        <img
+          src="images/home/hero_bg.png"
+          alt="Hero Background"
+          class="hero-bg-image"
+        />
+      </div>
       <div class="container">
         <div class="hero-content">
-          <h1>Welcome to E-Shop</h1>
-          <p>Discover amazing products at great prices</p>
-          <a href="shop.html" class="cta-button">Shop Now</a>
+          <span class="hero-label">New Arrival</span>
+          <h1>Discover Our<br />New Collection</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis.
+          </p>
+          <a href="shop.html" class="cta-button">BUY NOW</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse The Range Section -->
+    <section class="browse-range">
+      <div class="container">
+        <div class="section-header">
+          <h2>Browse The Range</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="range-grid">
+          <div class="range-item">
+            <img src="images/home/mask_group_1.png" alt="Dining" />
+            <h3>Dining</h3>
+          </div>
+          <div class="range-item">
+            <img src="images/home/living_room.png" alt="Living" />
+            <h3>Living</h3>
+          </div>
+          <div class="range-item">
+            <img src="images/home/mask_group_2.png" alt="Bedroom" />
+            <h3>Bedroom</h3>
+          </div>
         </div>
       </div>
     </section>
