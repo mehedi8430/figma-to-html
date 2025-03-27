@@ -579,12 +579,18 @@ body {
 
 .main-slide {
   flex: 1.5;
-  height: 480px;
+  height: 582px;
+}
+
+.side-slide-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
 }
 
 .side-slide {
   flex: 1;
-  height: 480px;
+  height: 486px;
 }
 
 .slide img {
@@ -652,13 +658,12 @@ body {
 /* Side Slide Styles */
 .next-indicator {
   position: absolute;
-  right: 24px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 48px;
   height: 48px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #b88e2f;
+  background-color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -669,8 +674,9 @@ body {
 /* Slider Dots */
 .slider-dots {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
+  margin-top: 18px;
 }
 
 .dot {
@@ -719,5 +725,99 @@ body {
   .main-slide,
   .side-slide {
     height: 320px;
+  }
+}
+
+/* Share Section Styles */
+.share-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.share-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.share-header h2 {
+  font-size: 20px;
+  color: #616161;
+}
+
+.hashtag {
+  font-size: 36px;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 280px;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Special Grid Items */
+.gallery-item.tall {
+  grid-row: span 2;
+}
+
+.gallery-item.wide {
+  grid-column: span 2;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  .share-header h2 {
+    font-size: 28px;
+  }
+
+  .hashtag {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+  }
+
+  .gallery-item.wide,
+  .gallery-item.tall {
+    grid-column: auto;
+    grid-row: auto;
   }
 }
